@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 
+	"github.com/leogip/golang-jwt-rest/database"
 	"github.com/leogip/golang-jwt-rest/logger"
 )
 
@@ -18,6 +19,10 @@ var (
 
 func main() {
 	godotenv.Load()
+
+	if err := database.Connect(os.Getenv("DATABASE_URL")); err != nil {
+		log.Fatal(err)
+	}
 
 	routes := mux.NewRouter()
 
