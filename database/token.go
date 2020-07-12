@@ -3,9 +3,10 @@ package database
 import (
 	"context"
 
-	"github.com/leogip/golang-jwt-rest/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+
+	"github.com/leogip/golang-jwt-rest/models"
 )
 
 // FindToken ...

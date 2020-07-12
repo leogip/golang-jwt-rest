@@ -5,11 +5,11 @@ import (
 	"os"
 
 	"github.com/gorilla/handlers"
-	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 
 	"github.com/leogip/golang-jwt-rest/database"
 	"github.com/leogip/golang-jwt-rest/logger"
+	"github.com/leogip/golang-jwt-rest/router"
 )
 
 var (
@@ -24,7 +24,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	routes := mux.NewRouter()
+	routes := router.NewRouter()
 
 	originsOk := handlers.AllowedOrigins([]string{"*"})
 	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
