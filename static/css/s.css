@@ -1,0 +1,8 @@
+.response,
+.authorization {
+    display: none;
+}
+
+.msg {
+    word-break: break-all;
+}

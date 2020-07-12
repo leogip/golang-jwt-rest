@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Golang Rest JWT</title>
+        <link
+            rel="stylesheet"
+            href="https://bootswatch.com/4/lux/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="static/css/s.css">
+    </head>
+    <body>
+        <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/">RestGo</a>
+            <nav class="navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Get Tokens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/refresh">Refresh</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/remove">Remove</a></li>
+            </nav>
+        </header>
+        <main class="jumbotron bg-white">
+            <h1 class="display-6">Select ID user or Token ID for remove tokens</h1>
+            <div class="authorization alert alert-dismissible alert-success">
+                <h4 class="alert-heading">Your Authorization</h4>
+                <p class="mb-0 msg"></p>
+            </div>
+            <div class="response alert alert-dismissible">
+                <h4 class="alert-heading"></h4>
+                <p class="mb-0 msg"></p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-6">
+                    <p>/api/token/remove/u/{userId}</p>
+                </div>
+                <div class="col-6">
+                    <p>/api/token/remove/t/{tokenId}</p>
+                </div>  
+            </div> 
+            <div class="row">
+                <div class="col-6">
+                    <div class="list-group u-list"></div>
+                </div>
+                <div class="col-6">
+                    <div class="list-group t-list"></div>
+                </div>
+            </div>
+        </main>
+        <script type="module" src="static/js/remove.js"></script>
+    </body>
+</html>

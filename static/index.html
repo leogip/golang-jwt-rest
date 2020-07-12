@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Get Tokens | Golang Rest JWT</title>
+        <link
+            rel="stylesheet"
+            href="https://bootswatch.com/4/lux/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="static/css/s.css">
+    </head>
+    <body>
+        <header class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/">RestGo</a>
+            <nav class="navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="/">Get Tokens</a></li>
+                <li class="nav-item"><a class="nav-link" href="/refresh">Refresh</a></li>
+                <li class="nav-item"><a class="nav-link" href="/remove">Remove</a></li>
+            </nav>
+        </header>
+        <main class="jumbotron bg-white">
+            <h1 class="display-4">Select and click ID user</h1>
+            <div class="authorization alert alert-dismissible alert-success">
+                <h4 class="alert-heading">Your Authorization</h4>
+                <p class="mb-0 msg"></p>
+            </div>
+            <div class="response alert alert-dismissible">
+                <h4 class="alert-heading"></h4>
+                <p class="mb-0 msg"></p>
+            </div>
+            <p class="mt-5">/api/token/get/{userId}</p>
+            <div class="list-group u-list"></div>
+        </main>
+        <script type="module" src="static/js/index.js"></script>
+    </body>
+</html>
